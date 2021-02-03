@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMaps</title>
+    <style>
+        #target {
+            width: 550px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="target"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?language=ja&redion=JP&key=AIzaSyDLmUBdMpH0x5SaQqwA0s8Q410OVLpILmg&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            "use strict";
+
+            var targert = document.getElementById("target");
+            var map;
+            var tokyo = {lat: 35.681167, lng: 139.767052};
+
+            map = new google.maps.Map(targert, {
+                center: tokyo,
+                zoom: 151,
+            });
+        }
+    </script>
+</body>
+</html>
