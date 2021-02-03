@@ -21,11 +21,23 @@
             var targert = document.getElementById("target");
             var map;
             var tokyo = {lat: 35.681167, lng: 139.767052};
+            var marker;
 
             map = new google.maps.Map(targert, {
                 center: tokyo,
-                zoom: 151,
+                zoom: 15,
             });
+
+            marker = new google.maps.Marker({
+                position: tokyo, // 位置を指定
+                map: map, //このマーカーをどのmapに配置したらよいか
+                title: "Tokyo!",
+                icon: {
+                    url: "icon.png",
+                    
+                }
+            });
+            
         }
     </script>
 </body>
